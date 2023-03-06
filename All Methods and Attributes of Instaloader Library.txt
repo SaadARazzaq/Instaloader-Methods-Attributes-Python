@@ -1,0 +1,282 @@
+👉Here are all the methods and attributes of the Instaloader class in the Instaloader library, as described in the documentation:
+
+------------------------------------------------------------------------------------------------------------------------------------------
+🔥Methods:
+------------------------------------------------------------------------------------------------------------------------------------------
+
+✅__init__(self, **kwargs): Initializes a new Instaloader instance.
+
+✅context(self): Returns the context of the Instaloader instance.
+
+✅save_session_to_file(self, filename): Saves the session state to a file.
+
+✅load_session_from_file(self, filename): Loads the session state from a file.
+
+✅login(self, user, passwd): Logs in to Instagram using the provided username and password.
+
+✅logout(self): Logs out of Instagram.
+
+✅get_hashtag_posts(self, hashtag): Returns a generator of all posts with a given hashtag.
+
+✅get_profile_posts(self, profile): Returns a generator of all posts of a given profile.
+
+✅download_profile(self, profile, **kwargs): Downloads all posts, metadata and optionally profile picture and stories of a given profile.
+
+✅download_hashtag(self, hashtag, **kwargs): Downloads all posts and metadata of a given hashtag.
+
+✅download_post(self, post, **kwargs): Downloads a post and its metadata.
+
+✅download_comments(self, post, **kwargs): Downloads the comments of a given post.
+
+✅download_geotags(self, geotag, **kwargs): Downloads all posts and metadata for a given geotag.
+
+✅download_stories(self, userids, **kwargs): Downloads all stories of the given userids.
+
+✅download_feed(self, **kwargs): Downloads all posts from the logged-in user's feed.
+
+✅download_tagged(self, profile, **kwargs): Downloads all posts in which the given profile is tagged.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+🔥Attributes:
+------------------------------------------------------------------------------------------------------------------------------------------
+
+➡️context: The context of the Instaloader instance.
+
+➡️context.username: The username of the logged-in user.
+
+➡️context.password: The password of the logged-in user.
+
+➡️context.session_file: The path to the session file used by the Instaloader instance.
+
+➡️context.session_file_mtime: The modification time of the session file.
+
+➡️context.is_logged_in: Whether the Instaloader instance is currently logged in or not.
+
+➡️context.query_cookies: The cookies used for query requests.
+
+➡️context.edge_web_cookies: The cookies used for Edge Web requests.
+
+➡️context.fbns_cookies: The cookies used for Fbns requests.
+
+➡️context.username_id: The user ID of the logged-in user.
+
+➡️context.user_agent: The user agent used for HTTP requests.
+
+➡️context.custom_query_headers: Custom headers for query requests.
+
+➡️context.custom_edge_web_headers: Custom headers for Edge Web requests.
+
+➡️context.custom_fbns_headers: Custom headers for Fbns requests.
+
+➡️context.rate_controller: The rate controller used for HTTP requests.
+
+➡️context.request_timeout: The timeout for HTTP requests.
+
+➡️context.proxy_handler: The proxy handler used for HTTP requests.
+
+➡️context.queries_queue: The queue of pending GraphQL queries.
+
+➡️context.queries_queue_lock: The lock for the queries_queue attribute.
+
+➡️context.debug_http: Whether HTTP requests should be printed to the console for debugging purposes.
+
+➡️context.debug_requests: Whether requests to the Instagram servers should be printed to the console for debugging purposes.
+
+➡️context.sleep_multiplier: The sleep multiplier used by the rate controller.
+
+➡️context.nightly_build: Whether the instance should use the latest nightly build of Instaloader.
+
+➡️context.verbosity: The verbosity level of the Instaloader instance.
+
+➡️context.logger: The logger used by the Instaloader instance.
+
+➡️save_session(): Save the current session cookie to the cookie jar file.
+
+➡️load_session(): Load a session cookie from the cookie jar file.
+
+➡️context.get_session_id(): Get the session ID of the current session cookie.
+
+➡️context.get_session_file(): Get the file name of the session cookie jar.
+
+➡️context.check_session() (deprecated): Check whether the session cookie is still valid.
+
+➡️context.logout(): Log out the currently logged-in user.
+
+➡️context.is_logged_in: Whether a user is currently logged in.
+
+➡️context.interactive_login(): Log in the user interactively.
+
+➡️context.authenticated_request() (deprecated): Perform an authenticated HTTP request.
+
+➡️context.graphql_query() (deprecated): Perform a GraphQL query.
+
+➡️context.check_ratelimit() (deprecated): Check whether the rate limit has been reached.
+
+➡️context.sleep() (deprecated): Sleep for a given amount of time, taking into account the rate controller.
+
+➡️context.exception_sleep() (deprecated): Sleep for a given amount of time when an exception has occurred, taking into account the rate 
+controller.
+
+➡️context.test_login(): Test whether the provided login credentials are valid.
+
+➡️context.get_user(user: str): Get an instance of the Profile class representing a user.
+
+➡️context.download_profile(): Download a user's profile data to disk.
+
+➡️context.download_profiles(): Download profile data for multiple users to disk.
+
+➡️context.download_stories(): Download stories for one or more users.
+
+➡️context.download_feed(): Download a user's feed.
+
+➡️context.download_hashtag(): Download posts for a given hashtag.
+
+➡️context.download_hashtag_feed(): Download a hashtag feed.
+
+➡️context.download_comments(): Download comments for one or more posts.
+
+➡️context.download_geotags(): Download posts for one or more geotags.
+
+➡️context.download_geotag_feed(): Download a geotag feed.
+
+➡️context.download_tagged(): Download posts in which a user is tagged.
+
+➡️context.download_tagged_feed(): Download a tagged feed.
+
+➡️context.download_igtv(): Download IGTV videos.
+
+➡️context.download_highlights(): Download highlights.
+
+➡️context.download_followers(): Download followers of a user.
+
+➡️context.download_followees(): Download users a user is following.
+
+➡️context.download_similar_accounts(): Download similar accounts.
+
+➡️context.download_saved_posts(): Download saved posts.
+
+➡️context.download_tagged_posts() (deprecated): Download posts in which a user is tagged.
+
+➡️context.download_user_stories() (deprecated): Download stories for a user.
+
+➡️context.download_stories_of_followees() (deprecated): Download stories for users a user is following.
+
+➡️context.save_session_to_file(filename: str): Save the current session to a file.
+
+➡️context.load_session_from_file(filename: str): Load a session from a file.
+
+➡️context.context_sleep(delay: float): Sleep for a given amount of time, while allowing the Instaloader instance to be stopped by a keyboard interrupt.
+
+➡️context.checkpoint_reached(): Returns True if the current time is beyond the checkpoint set by context.checkpoint_resume() method.
+
+➡️context.checkpoint_resume(): Sets the checkpoint time for the next iteration of a download job.
+
+➡️context.stop() (deprecated): Stop the current download process.
+
+➡️context.log() (deprecated): Print a log message with a given severity level.
+
+➡️context.flush() (deprecated): Flush the log messages.
+
+➡️context.banner() (deprecated): Print a banner message.
+
+➡️context.close() (deprecated): Close the Instaloader instance and terminate any ongoing download jobs.
+
+➡️context.interactive_login(): Prompt the user to log in interactively.
+
+➡️context.test_connection() (deprecated): Test whether a connection can be established to Instagram servers.
+
+➡️context.set_max_connection_attempts(max_connection_attempts: int): Set the maximum number of attempts to establish a connection to 
+Instagram servers.
+
+➡️context.set_retry_metadata_login(retry_metadata_login: bool): Set whether metadata login should be retried if it fails.
+
+➡️context.set_metadata_stories_enabled(metadata_stories_enabled: bool): Set whether metadata stories should be downloaded.
+
+➡️context.set_user_metadata_enabled(user_metadata_enabled: bool): Set whether user metadata should be downloaded.
+
+➡️context.set_comments_enabled(comments_enabled: bool): Set whether comments should be downloaded.
+
+➡️download_profile(profile: Union[str, Profile], *args, **kwargs): Download all media of a given profile.
+
+➡️download_hashtag(hashtag: Union[str, Hashtag], *args, **kwargs): Download all media of a given hashtag.
+
+➡️download_tagged(username: Union[str, Profile], *args, **kwargs): Download all media in which a given profile was tagged.
+
+➡️download_feed_posts(*args, **kwargs): Download all new posts from the current user's feed.
+
+➡️download_saved_posts(*args, **kwargs): Download all saved posts of the current user.
+
+➡️download_igtv(*args, **kwargs): Download all IGTV videos of the current user.
+
+➡️download_highlights(*args, **kwargs): Download all highlights of the current user.
+
+➡️download_stories(*args, **kwargs): Download all stories of the current user.
+
+➡️download_comments(post: Union[str, Post], *args, **kwargs): Download all comments of a given post.
+
+➡️download_geotags(*args, **kwargs): Download all geotags.
+
+➡️save_metadata(profile: Union[str, Profile], *args, **kwargs): Save metadata for a given profile to a file.
+
+➡️load_metadata(profile: Union[str, Profile], *args, **kwargs): Load metadata for a given profile from a file.
+
+➡️download_all(*args, **kwargs): Download everything from the current user's account.
+
+➡️download_multiple_profiles(*args, **kwargs): Download media from multiple profiles.
+
+➡️get_profile_by_username(username: str) -> Profile: Get a Profile object for a given username.
+
+➡️get_hashtag_by_name(hashtag: str) -> Hashtag: Get a Hashtag object for a given hashtag.
+
+➡️get_post_by_shortcode(shortcode: str) -> Post: Get a Post object for a given shortcode.
+
+➡️context.is_logged_in: Returns True if currently logged in to an Instagram account.
+
+➡️context.session_file: Path to the file where the session is saved.
+
+➡️context.username: Username of the currently logged in Instagram account.
+
+➡️context.password: Password of the currently logged in Instagram account.
+
+➡️context.rate_controller: Controls the rate at which the Instaloader instance accesses Instagram servers.
+
+➡️context.query_rate_limiter: Manages query rate limiting.
+
+➡️context.fileurl_to_path(url: str) -> Optional[str]: Returns the file path for a given URL if it is already downloaded, otherwise returns None.
+
+➡️context.load_session_from_file(sessionfilename: str): Loads a saved session from a file.
+
+➡️context.save_session_to_file(sessionfilename: str): Saves the current session to a file.
+
+➡️context.user_agent: User agent string that is sent with requests to Instagram.
+
+➡️context.storyitem_url_metadata_cache: Cache for story item URLs that have been checked for metadata.
+
+➡️context.logger: Logger used for logging messages in Instaloader.
+
+➡️context.update_session(): Update the session by logging in again and discarding all cached information.
+
+➡️context.logfilename: Path to the file where the logger writes messages to.
+
+➡️context.informative_action: Optional callable that will be called with an informative action string when an informative action happens.
+
+➡️context.error_action: Optional callable that will be called with an error message string when an error happens.
+
+➡️context.quiet: If set to True, suppresses console output.
+
+➡️get_comments(post: Union[str, Post]) -> List[Comment]: Get a list of comments for a given post.
+
+➡️get_likes(post: Union[str, Post]) -> List[Profile]: Get a list of profiles that have liked a given post.
+
+➡️get_posts_from_profiles(profiles: Iterable[Union[str, Profile]]) -> Generator[Post, None, None]: Get a generator of posts from multiple 
+profiles.
+
+➡️get_saved_posts() -> List[Post]: Get a list of saved posts for the currently logged in user.
+
+➡️get_stories(userids: Optional[List[int]] = None, exclude_stories_from_friends: bool = False, max_count: Optional[int] = None) -> 
+List[Story]: Get a list of stories for the currently logged in user or for a given list of user IDs.
+
+➡️get_user_id_from_username(username: str) -> Optional[int]: Get the user ID for a given username.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
